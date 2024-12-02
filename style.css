@@ -1,0 +1,129 @@
+body {
+    background-image: linear-gradient(to right, black, white);
+    font-family: sans-serif;
+}
+
+.color-change-2x {
+    -webkit-animation: color-change-2x 1000ms linear infinite alternate both;
+    animation: color-change-2x 1000ms linear infinite alternate both;
+}
+
+main {
+    background-color: #ffffff;
+    width: 80vw;
+    margin: auto;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* ------MENU-HAMBURGUER------ */
+
+header {
+    border-radius: 14px;
+    background-color: #333;
+    padding: 15px;
+    margin: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+section {
+    padding: 10px;
+}
+
+section p::first-letter {
+    color: #fadebc;
+    font-size: 20px;
+}
+
+section img {
+    border-radius: 39px;
+    background: #7e3e3e;
+    box-shadow: 13px 13px 35px #341919,
+        -13px -13px 35px #c86363;
+}
+
+
+
+/* --ANIM GRADIENT */
+
+@-webkit-keyframes color-change-2x {
+    0% {
+        background: #19dcea;
+    }
+
+    100% {
+        background: #b22cff;
+    }
+}
+
+@keyframes color-change-2x {
+    0% {
+        background: #19dcea;
+    }
+
+    100% {
+        background: #b22cff;
+    }
+}
+
+
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 5px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu li a {
+    color: #fadebc;
+    text-decoration: none;
+    margin: 15px;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        margin-bottom: 5em;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+
+    .menu.active {
+        display: flex;
+    }
+}
